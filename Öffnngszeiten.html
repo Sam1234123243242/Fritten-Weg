@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Gesamt-Menü</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: #fdf6e3;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    /* Navigation Box oben rechts */
+    .box {
+        position: fixed;
+        right: 20px;
+        top: 15px;
+        width: auto;
+        background-color: white;
+        border-radius: 20px;
+        padding: 15px 30px;
+        box-shadow: -25px 20px 30px rgba(0,0,0,0.2);
+        z-index: 10;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .box a {
+        color: black;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s;
+    }
+
+    .box a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    /* Sektionen */
+    .menu-section {
+        max-width: 1200px;
+        margin: 100px auto 50px auto;
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+
+    .menu-section.kartoffel {
+        background-color: #fff8dc;
+    }
+
+    .menu-section.fleisch {
+        background-color: #ffe4e1;
+    }
+
+    .menu-section h1 {
+        text-align: center;
+        font-family: 'Pacifico', cursive;
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .menu-item {
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .menu-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    .menu-item img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+
+    .menu-item h2 {
+        font-family: 'Pacifico', cursive;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    .menu-item p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .price {
+        font-weight: bold;
+        margin-top: 10px;
+        color: #b22222;
+        font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+        .box {
+            width: 90%;
+            right: 5%;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Navigation Box -->
+
+<div class="box">
+    <a href="Index.html">Home</a>
+    <a href="Menü.html">Menü</a>
+    <a href="Öffnungszeiten.html">Öffnungszeiten</a>
+    <a href="Impressum.html">Impressum</a>
+</div>
+
+<!-- Kartoffel-Menü -->
+
+<div class="menu-section kartoffel">
+    <h1>Kartoffel-Menü</h1>
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="kartoffel-gratin.jpg" alt="Kartoffelgratin">
+            <h2>Kartoffelgratin mit Hähnchen</h2>
+            <p>Überbackene Kartoffeln mit cremiger Sauce und zartem Hähnchenfleisch.</p>
+            <div class="price">€12,50</div>
+        </div>
+        <div class="menu-item">
+            <img src="kartoffel-stampf-rind.jpg" alt="Kartoffelstampf mit Rind">
+            <h2>Kartoffelstampf mit Rinderbraten</h2>
+            <p>Hausgemachter Kartoffelstampf mit saftigem Rinderbraten und Bratensauce.</p>
+            <div class="price">€14,00</div>
+        </div>
+        <div class="menu-item">
+            <img src="kartoffel-auflauf-schwein.jpg" alt="Kartoffelauflauf mit Schwein">
+            <h2>Kartoffelauflauf mit Schweinefleisch</h2>
+            <p>Herzhafter Auflauf aus Kartoffeln, Gemüse und zartem Schweinefleisch.</p>
+            <div class="price">€13,50</div>
+        </div>
+        <div class="menu-item">
+            <img src="kartoffel-ratatouille.jpg" alt="Kartoffel Ratatouille">
+            <h2>Kartoffel-Ratatouille mit Hähnchen</h2>
+            <p>Kartoffeln mit buntem Ratatouille und gegrilltem Hähnchen.</p>
+            <div class="price">€12,80</div>
+        </div>
+    </div>
+</div>
+
+<!-- Fleisch-Menü -->
+
+<div class="menu-section fleisch">
+    <h1>Fleisch-Menü</h1>
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="rindersteak.jpg" alt="Rindersteak">
+            <h2>Rindersteak mit Gemüse</h2>
+            <p>Zartes Rindersteak mit saisonalem Gemüse und Sauce.</p>
+            <div class="price">€18,50</div>
+        </div>
+        <div class="menu-item">
+            <img src="hähnchenbrust.jpg" alt="Hähnchenbrust">
+            <h2>Gegrillte Hähnchenbrust</h2>
+            <p>Saftige Hähnchenbrust mit Kräutern und Beilagen.</p>
+            <div class="price">€15,50</div>
+        </div>
+        <div class="menu-item">
+            <img src="schweinefilet.jpg" alt="Schweinefilet">
+            <h2>Schweinefilet mit Rahmsauce</h2>
+            <p>Zartes Schweinefilet mit cremiger Rahmsauce und Gemüse.</p>
+            <div class="price">€16,00</div>
+        </div>
+        <div class="menu-item">
+            <img src="lammkoteletts.jpg" alt="Lammkoteletts">
+            <h2>Lammkoteletts mit Rosmarin</h2>
+            <p>Gegrillte Lammkoteletts mit Rosmarin und frischen Beilagen.</p>
+            <div class="price">€19,50</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
